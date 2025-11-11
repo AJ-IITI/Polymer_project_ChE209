@@ -42,15 +42,15 @@ Interpretation: 0 = core, 1–3 = junctions, 4–9 = terminals.
 ## 📁 Repository Layout
 
 .
-├─ README.md
-├─ generate_group1_tree.py      # builds 118‑atom LAMMPS data + topology_edges.txt
-├─ polymer.data                 # LAMMPS data (generated/overwritten)
-├─ in.group1                    # LAMMPS input script
-├─ run_group1_test.sh           # one‑click run on cluster
-├─ compute_rg_from_dump.py      # numerical Rg/Rg² from trajectory
-├─ analytic_graph_rg.py         # Rg² via graph theory from topology_edges.txt
-├─ topology_edges.txt           # 10‑node edge list (graph)
-└─ RESULTS_SUMMARY.txt          # consolidated outputs
+- ├─ README.md
+- ├─ generate_group1_tree.py      # builds 118‑atom LAMMPS data + topology_edges.txt
+- ├─ polymer.data                 # LAMMPS data (generated/overwritten)
+- ├─ in.group1                    # LAMMPS input script
+- ├─ run_group1_test.sh           # one‑click run on cluster
+- ├─ compute_rg_from_dump.py      # numerical Rg/Rg² from trajectory
+- ├─ analytic_graph_rg.py         # Rg² via graph theory from topology_edges.txt
+- ├─ topology_edges.txt           # 10‑node edge list (graph)
+- └─ RESULTS_SUMMARY.txt          # consolidated outputs
 
 ---
 
