@@ -1,0 +1,40 @@
+# in.group1 : Group 1 tree (Kremer-Grest)
+units           lj
+dimension       3
+atom_style      bond
+boundary        p p p
+
+read_data       polymer.data
+
+pair_style      lj/cut 2.5
+pair_modify     shift yes
+pair_coeff      1 1 1.0 1.0 1.1224615296
+
+bond_style      fene
+bond_coeff      1 30.0 1.5 1.0 1.0
+
+neighbor        0.4 bin
+neigh_modify    every 1 delay 5 check yes
+
+velocity        all create 1.0 240008004 mom yes rot yes
+fix             int all nve
+fix             bath all langevin 1.0 1.0 1.0 240008004
+
+compute         Rg all gyration
+
+thermo          1000
+thermo_style    custom step temp pe etotal c_Rg
+
+dump            d1 all custom 1000 group1_traj.lammpsdump id type xu yu zu
+dump_modify     d1 sort id
+
+fix             avgRg all ave/time 100 10 1000 c_Rg file radius_gyration.dat
+
+variable        equil equal 50000
+variable        prod  equal 100000
+
+run ${equil}
+reset_timestep 0
+run ${prod}
+
+write_data polymer_final.data

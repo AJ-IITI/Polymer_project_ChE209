@@ -1,0 +1,30 @@
+GROUP 1: DENDRIMER POLYMER RESULTS
+===================================
+
+STRUCTURE:
+- Type: 3-arm star dendrimer
+- Topology: 1 core → 3 junctions → 6 terminals
+- Total atoms: 118
+- Total bonds: 117
+
+NUMERICAL RESULTS (MD Simulation):
+- Mean Rg² = 42.06
+- Mean Rg  = 6.49
+- Frames analyzed: 51
+- Temperature: 1.0 (reduced units)
+
+ANALYTICAL RESULTS (Graph Theory):
+- Analytic Rg² (b²=1) = 12.52
+- Analytic Rg = 3.54
+- S (sum of distances) = 348648
+- N (nodes) = 118
+
+COMPARISON:
+- Ratio (numerical/analytical) ≈ 3.36
+- Difference due to:
+  1. Bond length scaling (b² ≈ 1.44)
+  2. Thermal fluctuations in MD
+  3. Finite size effects
+  
+CONTRACTION FACTOR g:
+- For Group 1 (reference molecule): g = 1.0 by definition
