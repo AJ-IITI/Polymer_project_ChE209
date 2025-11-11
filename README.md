@@ -56,19 +56,19 @@ Interpretation: 0 = core, 1–3 = junctions, 4–9 = terminals.
 
 ## 🛠️ Requirements
 
-# Python (install NumPy)
+### Python (install NumPy)
 pip install numpy
 
-# LAMMPS — ensure the executable is available on PATH.
-# On most clusters the command is either `lmp` or `lmp_mpi`.
-# You should be able to run one of the following without error:
+### LAMMPS — ensure the executable is available on PATH.
+### On most clusters the command is either `lmp` or `lmp_mpi`.
+### You should be able to run one of the following without error:
 lmp -h        # or:
 lmp_mpi -h
 
-# If neither works, load your site’s LAMMPS module (example):
-# module load lammps
+### If neither works, load your site’s LAMMPS module (example):
+### module load lammps
 
-# Optional: verify MPI is available (for parallel runs)
+### Optional: verify MPI is available (for parallel runs)
 mpirun --version   # or: mpiexec --version
 
 ---
